@@ -1,0 +1,19 @@
+.input {
+	-fx-background-color: none;
+	-fx-border-width: 0 0 1 0;
+	-fx-border-color: #898989;
+}
+
+.createAccount:hover{
+	-fx-cursor: "hand";
+}
+
+.btn {
+	-fx-background-color: #691414;
+	-fx-background-radius: 20px;
+}
+
+.btn:hover {
+	-fx-background-color: #8c1515;	
+	-fx-cursor: "hand";
+}
