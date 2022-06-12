@@ -1,0 +1,24 @@
+.btnFinish {
+	-fx-background-color: #691414;
+	-fx-background-radius: 20px;
+}
+
+.btn:hover {
+	-fx-background-color: #8c1515;	
+	-fx-cursor: "hand";
+}
+
+.btnBack {
+	-fx-background-radius: 20px;
+	-fx-border-radius: 20px;
+	-fx-background-color: none;
+	-fx-border-color: #691414;	
+}
+
+.btnBack:hover {
+	-fx-background-radius: 20px;
+	-fx-border-radius: 20px;
+	-fx-background-color: #691414;
+	-fx-border-color: none;	
+	-fx-text-fill: #fff;
+}

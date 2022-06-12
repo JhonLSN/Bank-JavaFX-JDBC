@@ -12,8 +12,11 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	
 	private static Stage stage;	
+	
+	// Screens
 	private static Scene mainScene;
 	private static Scene interfaceScene;
+	private static Scene signUpScene;
 	
 	@Override
 	public void start(Stage stage) {
@@ -29,6 +32,9 @@ public class Main extends Application {
 			
 			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/gui/Main.fxml"));
 			mainScene = new Scene(fxmlMain);
+			
+			Parent fxmlSignUp = FXMLLoader.load(getClass().getResource("/gui/SignUp.fxml"));
+			signUpScene = new Scene(fxmlSignUp);
 			
 			// Disable custom window
 			stage.setResizable(false);
@@ -52,6 +58,9 @@ public class Main extends Application {
 				stage.setScene(interfaceScene);
 				stage.setTitle("Interface");
 				break;
+			case "signUp":
+				stage.setScene(signUpScene);
+				stage.setTitle("Sign Up");
 		}
 	}
 	

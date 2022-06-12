@@ -24,7 +24,7 @@
                   <Font name="Calibri Bold" size="24.0" />
                </font>
             </Label>
-            <ImageView fitHeight="218.0" fitWidth="268.0" layoutX="41.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="218.0" fitWidth="268.0" layoutX="41.0" layoutY="143.0" onMouseClicked="#signUp" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/tecnology.png" />
                </image>
@@ -50,8 +50,8 @@
                      <font>
                         <Font size="18.0" />
                      </font></TextField>
-                  <Label layoutX="176.0" layoutY="271.0" styleClass="createAccount" stylesheets="@css/Style.css" text="Create your account." textFill="#691414" />
-                  <Button fx:id="btnLogin" layoutX="131.0" layoutY="328.0" mnemonicParsing="false" onAction="#accessAvailable" prefHeight="34.0" prefWidth="90.0" styleClass="btn" stylesheets="@css/Style.css" text="Login" textFill="WHITE">
+                  <Label fx:id="btnSignUp" layoutX="176.0" layoutY="271.0" onMouseClicked="#signUp" onTouchPressed="#accessAvailable" styleClass="createAccount" stylesheets="@css/Style.css" text="Create your account." textFill="#691414" />
+                  <Button fx:id="btnLogin" layoutX="131.0" layoutY="328.0" mnemonicParsing="false" onAction="#accessAvailable" onMouseClicked="#signUp" prefHeight="34.0" prefWidth="90.0" styleClass="btn" stylesheets="@css/Style.css" text="Login" textFill="WHITE">
                      <font>
                         <Font name="Calibri" size="19.0" />
                      </font>
