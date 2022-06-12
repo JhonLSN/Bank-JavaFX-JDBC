@@ -81,5 +81,4 @@ public class InterfaceController implements Initializable {
 				Main.changeScreen("main");	
 		}
 	}
-
 }

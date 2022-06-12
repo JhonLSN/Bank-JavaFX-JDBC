@@ -50,7 +50,7 @@ public class Main extends Application {
 				break;
 			case "interface":
 				stage.setScene(interfaceScene);
-				stage.setTitle("BankTCS");
+				stage.setTitle("Interface");
 				break;
 		}
 	}
