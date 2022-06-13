@@ -9,11 +9,11 @@
 }
 
 .btn {
-	-fx-background-color: #691414;
+	-fx-background-color: #186288;
 	-fx-background-radius: 20px;
 }
 
 .btn:hover {
-	-fx-background-color: #8c1515;	
+	-fx-background-color: #1b7db0;	
 	-fx-cursor: "hand";
 }

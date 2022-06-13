@@ -1,32 +1,32 @@
 .pane {
-	-fx-background-color: #5c0e0e;
-	-fx-background-radius: 10px;
+	-fx-background-color: #3fbddc;
+	-fx-background-radius: 6px;
 }
 
 .button
 {
-    -fx-background-color : #8c1515;
+    -fx-background-color : #3fbddc;
 }
 .button:hover
 {
-    -fx-background-color : #5c0e0e;
+    -fx-background-color : #2780ad;
 }
 
 .button:focused {
-	-fx-background-color: #5c0e0e;
+	-fx-background-color: #186288;
 	-fx-border-color: #fff;
 	-fx-border-width: 0px 0px 0px 3px;
 }
 
 .button:pressed
 {
-    -fx-background-color : #dc2121;
+    -fx-background-color : #186288;
 }
 
 .table-view .column-header,
 .table-view .column-header-background .filler {
     -fx-cell-size : 20;
-    -fx-background-color:   #5c0e0e;
+    -fx-background-color:  #3fbddc;
 }
 .table-view .column-header .label{
 

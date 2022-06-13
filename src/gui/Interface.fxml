@@ -19,15 +19,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="977.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.InterfaceController">
    <children>
-      <VBox fx:id="vbxStatus" prefHeight="646.0" prefWidth="271.0" style="-fx-background-color: #8c1515;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox fx:id="vbxStatus" prefHeight="646.0" prefWidth="271.0" style="-fx-background-color: #3fbddc;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane prefHeight="89.0" prefWidth="271.0">
+            <Pane prefHeight="87.0" prefWidth="271.0" style="-fx-background-color: #043b57;">
                <children>
-                  <Label fx:id="lblLogo" alignment="CENTER" prefHeight="89.0" prefWidth="271.0" style="-fx-background-color: #791212;" text="BankTCS" textFill="WHITE">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
+                  <ImageView fitHeight="92.0" fitWidth="228.0" layoutX="27.0" layoutY="1.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@img/badaiBank.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
             <Button fx:id="btnAccount" alignment="BASELINE_LEFT" graphicTextGap="12.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="54.0" prefWidth="271.0" stylesheets="@css/IntefaceStyle.css" text="Account" textFill="WHITE">
@@ -116,7 +116,7 @@
             </GridPane>
          </children>
       </StackPane>
-      <Pane fx:id="pnlStatus" layoutX="270.0" layoutY="44.0" prefHeight="104.0" prefWidth="707.0" style="-fx-background-color: #5c0e0e;">
+      <Pane fx:id="pnlStatus" layoutX="270.0" layoutY="44.0" prefHeight="104.0" prefWidth="707.0" style="-fx-background-color: #3fb0cc;">
          <children>
             <Label fx:id="lblStatusMini" layoutX="44.0" layoutY="23.0" text="Home/Account" textFill="WHITE" />
             <Label fx:id="lblStatus" layoutX="40.0" layoutY="35.0" text="Account" textFill="WHITE">
@@ -125,9 +125,9 @@
                </font>
             </Label>
          </children></Pane>
-      <ImageView fitHeight="190.0" fitWidth="289.0" layoutX="305.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="190.0" fitWidth="289.0" layoutX="305.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/cardTcs.png" />
+            <Image url="@img/cardBadai.png" />
          </image>
       </ImageView>
       <Label layoutX="330.0" layoutY="317.0" text="JHONATAN LUAN DOS SANTOS" textFill="WHITE" />
@@ -136,19 +136,19 @@
          <font>
             <Font size="24.0" />
          </font></Label>
-      <Pane layoutX="631.0" layoutY="178.0" prefHeight="176.0" prefWidth="323.0" styleClass="pane" stylesheets="@css/IntefaceStyle.css">
+      <Pane layoutX="665.0" layoutY="184.0" prefHeight="176.0" prefWidth="281.0" styleClass="pane" stylesheets="@css/IntefaceStyle.css">
          <children>
             <Label layoutX="14.0" layoutY="14.0" text="Balance available" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="48.0" layoutY="78.0" text="R$ " textFill="WHITE">
+            <Label layoutX="34.0" layoutY="88.0" text="R$ " textFill="WHITE">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label layoutX="114.0" layoutY="78.0" text="1.800,00" textFill="WHITE">
+            <Label layoutX="100.0" layoutY="88.0" text="1.800,00" textFill="WHITE">
                <font>
                   <Font size="40.0" />
                </font>

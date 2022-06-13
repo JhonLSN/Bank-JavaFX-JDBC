@@ -65,7 +65,7 @@ public class InterfaceController implements Initializable {
 		if (event.getSource() == btnAccount) {	
 			lblStatusMini.setText("Home/Account");
 			lblStatus.setText("Account");
-			pnlStatus.setBackground(new Background(new BackgroundFill(Color.web("#5c0e0e"), CornerRadii.EMPTY, Insets.EMPTY)));
+			pnlStatus.setBackground(new Background(new BackgroundFill(Color.web("3fb0cc"), CornerRadii.EMPTY, Insets.EMPTY)));
 			gpnAccount.toFront();
 		} else if (event.getSource() == btnTransfer) {
 			lblStatusMini.setText("Home/Transfer");
@@ -75,7 +75,7 @@ public class InterfaceController implements Initializable {
 		} else if (event.getSource() == btnSettings) {
 			lblStatusMini.setText("Home/Settings");
 			lblStatus.setText("Settings");
-			pnlStatus.setBackground(new Background(new BackgroundFill(Color.rgb(43, 99, 63), CornerRadii.EMPTY, Insets.EMPTY)));
+			pnlStatus.setBackground(new Background(new BackgroundFill(Color.rgb(57, 96, 165), CornerRadii.EMPTY, Insets.EMPTY)));
 			gpnSettings.toFront();
 		} else if (event.getSource() == btnExit) {
 				Main.changeScreen("main");	
