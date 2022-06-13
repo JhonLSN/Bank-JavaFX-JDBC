@@ -117,3 +117,26 @@
     -fx-background-insets: 2, 0, 0;
     -fx-background-radius: 2em;
 }
+
+.inputTransfers {
+	-fx-background-color: none;
+	-fx-border-width: 0 0 1 0;
+	-fx-border-color: #898989;
+}
+
+.btnTransfers {
+	-fx-background-color: #186288;
+	-fx-background-radius: 20px;
+	-fx-border-color: none;
+	-fx-border-width: 0px 0px 0px 3px;
+}
+
+.btnTransfers:focused {
+	-fx-border-color: none;
+	-fx-border-width: none;
+}
+
+.btnTransfers:hover {
+	-fx-background-color: #1b7db0;	
+	-fx-cursor: "hand";
+}

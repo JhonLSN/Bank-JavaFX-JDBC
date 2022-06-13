@@ -10,6 +10,8 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
@@ -40,6 +42,18 @@ public class InterfaceController implements Initializable {
 
   @FXML
   private GridPane gpnTransfer;
+  
+  @FXML
+  private ImageView imgCardBadai;
+  
+  @FXML
+  private Label lblDateValid;
+
+  @FXML
+  private Label lblNameCard;
+
+  @FXML
+  private Label lblNumberCard;
 
   @FXML
   private Label lblStatus;
@@ -51,10 +65,22 @@ public class InterfaceController implements Initializable {
   private Pane pnlStatus;
   
   @FXML
+  private Pane pnlBalance;
+
+  @FXML
+  private Pane pnlCardBadai;
+  
+  @FXML
+  private Pane pnlTransfer;
+  
+  @FXML
   private VBox vbxStatus;
   
   @FXML
   private Label lblLogo;
+  
+  @FXML
+  private TableView<?> tblExtract;
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {		
@@ -66,19 +92,50 @@ public class InterfaceController implements Initializable {
 			lblStatusMini.setText("Home/Account");
 			lblStatus.setText("Account");
 			pnlStatus.setBackground(new Background(new BackgroundFill(Color.web("3fb0cc"), CornerRadii.EMPTY, Insets.EMPTY)));
-			gpnAccount.toFront();
+			showElementsAccount();
+			hideElementsTransfer();
 		} else if (event.getSource() == btnTransfer) {
 			lblStatusMini.setText("Home/Transfer");
 			lblStatus.setText("Transfer");
 			pnlStatus.setBackground(new Background(new BackgroundFill(Color.rgb(43, 63, 99), CornerRadii.EMPTY, Insets.EMPTY)));
-			gpnTransfer.toFront();
+			hideElementsAccount();	
+			showElementsTransfer();
 		} else if (event.getSource() == btnSettings) {
 			lblStatusMini.setText("Home/Settings");
 			lblStatus.setText("Settings");
 			pnlStatus.setBackground(new Background(new BackgroundFill(Color.rgb(57, 96, 165), CornerRadii.EMPTY, Insets.EMPTY)));
-			gpnSettings.toFront();
+			hideElementsAccount();
+			hideElementsTransfer();
 		} else if (event.getSource() == btnExit) {
 				Main.changeScreen("main");	
 		}
+	}
+	
+	private void hideElementsAccount() {
+		pnlCardBadai.setDisable(true);
+		pnlCardBadai.setOpacity(0);	
+		pnlBalance.setDisable(true);
+		pnlBalance.setOpacity(0);	
+		tblExtract.setDisable(true);
+		tblExtract.setOpacity(0);	
+	}
+	
+	private void showElementsAccount() {
+		pnlCardBadai.setDisable(false);
+		pnlCardBadai.setOpacity(1);	
+		pnlBalance.setDisable(false);
+		pnlBalance.setOpacity(1);	
+		tblExtract.setDisable(false);
+		tblExtract.setOpacity(1);	
+	}
+	
+	private void hideElementsTransfer() {
+		pnlTransfer.setDisable(true);
+		pnlTransfer.setOpacity(0);
+	}
+	
+	private void showElementsTransfer() {
+		pnlTransfer.setDisable(false);
+		pnlTransfer.setOpacity(1);
 	}
 }
