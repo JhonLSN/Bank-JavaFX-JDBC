@@ -36,7 +36,7 @@
                         <Font name="Calibri Bold" size="30.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="48.0" layoutY="143.0" prefHeight="40.0" prefWidth="276.0" promptText="Full name" styleClass="input" stylesheets="@css/Style.css">
+                  <TextField fx:id="inputFullName" layoutX="48.0" layoutY="143.0" prefHeight="40.0" prefWidth="276.0" promptText="Full name" styleClass="input" stylesheets="@css/Style.css">
                      <font>
                         <Font size="18.0" />
                      </font></TextField>
@@ -48,7 +48,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <PasswordField layoutX="48.0" layoutY="358.0" prefHeight="25.0" prefWidth="276.0" promptText="Password" styleClass="input" stylesheets="@css/Style.css">
+                  <PasswordField fx:id="inputPassword" layoutX="48.0" layoutY="358.0" prefHeight="25.0" prefWidth="276.0" promptText="Password" styleClass="input" stylesheets="@css/Style.css">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -61,32 +61,32 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField layoutX="48.0" layoutY="197.0" prefHeight="40.0" prefWidth="276.0" promptText="Email" styleClass="input" stylesheets="@css/Style.css">
+                  <TextField fx:id="inputEmail" layoutX="48.0" layoutY="197.0" prefHeight="40.0" prefWidth="276.0" promptText="Email" styleClass="input" stylesheets="@css/Style.css">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <PasswordField layoutX="48.0" layoutY="412.0" prefHeight="25.0" prefWidth="276.0" promptText="Password again" styleClass="input" stylesheets="@css/Style.css">
+                  <PasswordField fx:id="inputConfirmPassword" layoutX="48.0" layoutY="412.0" prefHeight="25.0" prefWidth="276.0" promptText="Password again" styleClass="input" stylesheets="@css/Style.css">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </PasswordField>
-                  <TextField layoutX="48.0" layoutY="250.0" prefHeight="40.0" prefWidth="276.0" promptText="CPF" styleClass="input" stylesheets="@css/Style.css">
+                  <TextField fx:id="inputCpf" layoutX="48.0" layoutY="250.0" prefHeight="40.0" prefWidth="276.0" promptText="xxx.xxx.xxx-xx" styleClass="input" stylesheets="@css/Style.css">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="48.0" layoutY="305.0" prefHeight="40.0" prefWidth="60.0" promptText="dd" styleClass="input" stylesheets="@css/Style.css">
+                  <TextField fx:id="inputDay" layoutX="48.0" layoutY="305.0" prefHeight="40.0" prefWidth="60.0" promptText="dd" styleClass="input" stylesheets="@css/Style.css">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="156.0" layoutY="306.0" prefHeight="40.0" prefWidth="60.0" promptText="MM" styleClass="input" stylesheets="@css/Style.css">
+                  <TextField fx:id="inputMonth" layoutX="156.0" layoutY="306.0" prefHeight="40.0" prefWidth="60.0" promptText="mm" styleClass="input" stylesheets="@css/Style.css">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="264.0" layoutY="307.0" prefHeight="40.0" prefWidth="60.0" promptText="yyyy" styleClass="input" stylesheets="@css/Style.css">
+                  <TextField fx:id="inputYear" layoutX="264.0" layoutY="307.0" prefHeight="40.0" prefWidth="60.0" promptText="yyyy" styleClass="input" stylesheets="@css/Style.css">
                      <font>
                         <Font size="18.0" />
                      </font>
