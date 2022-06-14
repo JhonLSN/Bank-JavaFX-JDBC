@@ -26,13 +26,16 @@ public class InterfaceController implements Initializable {
   private Button btnAccount;
 
   @FXML
-  private Button btnExit;
+  private Button btnExit;  
 
   @FXML
   private Button btnSettings;
 
   @FXML
   private Button btnTransfer;
+  
+  @FXML
+  private Button btnUpdateTable;
   
   @FXML
   private GridPane gpnAccount;
@@ -71,6 +74,9 @@ public class InterfaceController implements Initializable {
   private Pane pnlCardBadai;
   
   @FXML
+  private Pane pnlSettings;
+  
+  @FXML
   private Pane pnlTransfer;
   
   @FXML
@@ -94,16 +100,19 @@ public class InterfaceController implements Initializable {
 			pnlStatus.setBackground(new Background(new BackgroundFill(Color.web("3fb0cc"), CornerRadii.EMPTY, Insets.EMPTY)));
 			showElementsAccount();
 			hideElementsTransfer();
+			hideElementsSettings();
 		} else if (event.getSource() == btnTransfer) {
 			lblStatusMini.setText("Home/Transfer");
 			lblStatus.setText("Transfer");
 			pnlStatus.setBackground(new Background(new BackgroundFill(Color.rgb(43, 63, 99), CornerRadii.EMPTY, Insets.EMPTY)));
-			hideElementsAccount();	
 			showElementsTransfer();
+			hideElementsAccount();	
+			hideElementsSettings();
 		} else if (event.getSource() == btnSettings) {
 			lblStatusMini.setText("Home/Settings");
 			lblStatus.setText("Settings");
 			pnlStatus.setBackground(new Background(new BackgroundFill(Color.rgb(57, 96, 165), CornerRadii.EMPTY, Insets.EMPTY)));
+			showElementsSettings();
 			hideElementsAccount();
 			hideElementsTransfer();
 		} else if (event.getSource() == btnExit) {
@@ -117,7 +126,9 @@ public class InterfaceController implements Initializable {
 		pnlBalance.setDisable(true);
 		pnlBalance.setOpacity(0);	
 		tblExtract.setDisable(true);
-		tblExtract.setOpacity(0);	
+		tblExtract.setOpacity(0);		
+		btnUpdateTable.setDisable(true);
+		btnUpdateTable.setOpacity(0);	
 	}
 	
 	private void showElementsAccount() {
@@ -126,7 +137,9 @@ public class InterfaceController implements Initializable {
 		pnlBalance.setDisable(false);
 		pnlBalance.setOpacity(1);	
 		tblExtract.setDisable(false);
-		tblExtract.setOpacity(1);	
+		tblExtract.setOpacity(1);		
+		btnUpdateTable.setDisable(false);
+		btnUpdateTable.setOpacity(1);	
 	}
 	
 	private void hideElementsTransfer() {
@@ -137,5 +150,15 @@ public class InterfaceController implements Initializable {
 	private void showElementsTransfer() {
 		pnlTransfer.setDisable(false);
 		pnlTransfer.setOpacity(1);
+	}
+	
+	private void hideElementsSettings() {
+		pnlSettings.setDisable(true);
+		pnlSettings.setOpacity(0);
+	}
+	
+	private void showElementsSettings() {
+		pnlSettings.setDisable(false);
+		pnlSettings.setOpacity(1);
 	}
 }

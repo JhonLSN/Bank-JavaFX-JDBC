@@ -106,7 +106,7 @@
             </Label>
          </children>
       </Pane>
-      <TableView fx:id="tblExtract" layoutX="303.0" layoutY="391.0" prefHeight="230.0" prefWidth="642.0" stylesheets="@css/IntefaceStyle.css">
+      <TableView fx:id="tblExtract" layoutX="303.0" layoutY="391.0" prefHeight="176.0" prefWidth="642.0" stylesheets="@css/IntefaceStyle.css">
         <columns>
           <TableColumn prefWidth="336.0" text="Extract" />
         </columns>
@@ -151,5 +151,45 @@
             </PasswordField>
          </children>
       </Pane>
+      <Pane fx:id="pnlSettings" disable="true" layoutX="303.0" layoutY="158.0" opacity="0.0" prefHeight="476.0" prefWidth="642.0">
+         <children>
+            <Label fx:id="lblStatus11" layoutX="225.0" layoutY="33.0" text="Change Password" textFill="#3fb0cc">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="267.0" layoutY="383.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="104.0" styleClass="btnTransfers" stylesheets="@css/IntefaceStyle.css" text="Confirm" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <PasswordField layoutX="149.0" layoutY="194.0" prefHeight="44.0" prefWidth="340.0" promptText="New Password" styleClass="inputTransfers" stylesheets="@css/IntefaceStyle.css">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </PasswordField>
+            <PasswordField layoutX="149.0" layoutY="130.0" prefHeight="44.0" prefWidth="340.0" promptText="Old password" styleClass="inputTransfers" stylesheets="@css/IntefaceStyle.css">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </PasswordField>
+            <PasswordField layoutX="149.0" layoutY="259.0" prefHeight="45.0" prefWidth="340.0" promptText="Confirm password" styleClass="inputTransfers" stylesheets="@css/IntefaceStyle.css">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </Pane>
+      <Button fx:id="btnUpdateTable" layoutX="572.0" layoutY="584.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="87.0" styleClass="btnTransfers" stylesheets="@css/IntefaceStyle.css" text="Update" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>
