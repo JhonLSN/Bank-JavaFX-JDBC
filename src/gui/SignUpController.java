@@ -108,7 +108,7 @@ public class SignUpController implements Initializable {
 			if (calendar.get(Calendar.YEAR) - Integer.parseInt(inputYear.getText()) < 18) {
 				Alerts.showAlert("You cannot register", null, "You are not of legal age", AlertType.ERROR);
 				return;
-			}	
+			}				
 			
 			// Registering at the bank
 			UserDao userDao = DaoFactory.createUserDao();			

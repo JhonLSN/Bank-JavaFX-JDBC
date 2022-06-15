@@ -6,8 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import application.Main;
 import db.DB;
 import db.DbException;
+import gui.util.Alerts;
+import javafx.scene.control.Alert.AlertType;
 import model.dao.UserDao;
 import model.entities.User;
 
@@ -47,12 +50,45 @@ public class UserDaoJDBC implements UserDao {
 				}
 				DB.closeResultSet(rs);
 			} else {
-				throw new DbException("Unexpected error! No rows affected!");
+					throw new DbException("Unexpected error! No rows affected!");
 			}
 		} catch (SQLException e) {
-			throw new DbException(e.getMessage());
+				throw new DbException(e.getMessage());
 		} finally {
-			DB.closeStatement(st);
+				DB.closeStatement(st);
+		}
+	}
+
+	@Override
+	public User getLogin(String email, String password) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		
+		try {
+			st = conn.prepareStatement(
+					"SELECT * FROM user "
+					+ "WHERE "
+					+ "Email = ? and Password = ?");
+			
+			st.setString(1, email);
+			st.setString(2, password);			
+			rs = st.executeQuery();
+			
+			if (rs.next()) {
+				User obj = new User();
+				obj.setEmail(rs.getString("Email"));
+				obj.setPassword(rs.getString("Password"));
+				Main.changeScreen("interface");
+				return obj;
+			} else {
+					Alerts.showAlert("Incorrect login", null, "Data not found in the database.\nCheck your email and password and try again.", AlertType.ERROR);
+			}
+			return null;
+		} catch (SQLException e) {
+				throw new DbException(e.getMessage());
+		}	finally {
+				DB.closeStatement(st);
+				DB.closeResultSet(rs);
 		}
 	}
 

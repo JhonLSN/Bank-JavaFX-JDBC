@@ -41,7 +41,7 @@
                      </font>
                   </Label>
                   <Label layoutX="48.0" layoutY="271.0" text="Don't have an account?" />
-                  <TextField layoutX="48.0" layoutY="149.0" prefHeight="40.0" prefWidth="255.0" promptText="Username or Email" styleClass="input" stylesheets="@css/Style.css">
+                  <TextField fx:id="inputEmail" layoutX="48.0" layoutY="149.0" prefHeight="40.0" prefWidth="255.0" promptText="Email" styleClass="input" stylesheets="@css/Style.css">
                      <font>
                         <Font size="18.0" />
                      </font></TextField>
@@ -51,7 +51,7 @@
                         <Font name="Calibri" size="19.0" />
                      </font>
                   </Button>
-                  <PasswordField layoutX="48.0" layoutY="211.0" prefHeight="25.0" prefWidth="255.0" promptText="Password" styleClass="input" stylesheets="@css/Style.css">
+                  <PasswordField fx:id="inputPassword" layoutX="48.0" layoutY="211.0" prefHeight="25.0" prefWidth="255.0" promptText="Password" styleClass="input" stylesheets="@css/Style.css">
                      <font>
                         <Font size="18.0" />
                      </font>
